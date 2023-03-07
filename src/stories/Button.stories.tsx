@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button } from './Button';
+import NavLinkButtonStyle from '../app/components/ui/NavLinkButton';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -39,3 +40,7 @@ Small.args = {
   size: 'small',
   label: 'Button',
 };
+
+export const NavLinkButton = (
+  <NavLinkButtonStyle size="small"></NavLinkButtonStyle>
+);
