@@ -1,6 +1,7 @@
 import './globals.css';
 
 import NavigationMenu from './components/NavigationMenu';
+import GlobalNavigation from './components/GlobalNavigation';
 
 export const metadata = {
   title: '청첩장',
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <GlobalNavigation />
         <NavigationMenu />
         <div>{children}</div>
       </body>

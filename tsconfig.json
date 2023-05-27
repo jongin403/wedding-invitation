@@ -28,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "/Users/mac/dev/wedding-invitation/.next/types/**/*.ts"
+    "/Users/mac/dev/wedding-invitation/.next/types/**/*.ts",
+    "declaration.d.ts"
   ],
   "exclude": ["node_modules"]
 }
