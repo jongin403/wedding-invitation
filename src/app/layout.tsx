@@ -2,7 +2,7 @@ import './globals.css';
 
 import NavigationMenu from '../components/NavigationMenu';
 import GlobalNavigation from '../components/GlobalNavigation';
-import '../styles/reset.css';
+import '../styles/init.scss';
 
 export const metadata = {
   title: '청첩장',
