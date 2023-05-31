@@ -1,0 +1,39 @@
+@import '../../styles/mixin';
+
+.infoBlockCard {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
+    url('/photo/15x10_DHZ4769.jpg');
+}
+
+.textWrap {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  @media #{$mobile} {
+    font-size: 32px;
+  }
+  font-family: $font-default;
+  font-size: 48px;
+  font-weight: 600;
+  color: $real-white;
+}
+
+.subtitle {
+  @media #{$mobile} {
+    font-size: 19px;
+  }
+  font-family: $font-default;
+  font-size: 24px;
+  font-weight: 400;
+  color: $real-white;
+}
