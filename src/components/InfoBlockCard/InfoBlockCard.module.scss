@@ -23,7 +23,7 @@
     font-size: 32px;
   }
   font-family: $font-default;
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 600;
   color: $real-white;
 }
@@ -33,7 +33,17 @@
     font-size: 19px;
   }
   font-family: $font-default;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 400;
   color: $real-white;
+}
+
+.viewMore {
+  @media #{$mobile} {
+    font-size: 17px;
+  }
+  font-family: $font-default;
+  font-size: 21px;
+  font-weight: 400;
+  color: $black-link-tag;
 }

@@ -23,13 +23,8 @@ const InfoBlockCard = ({
       <div className={styles.textWrap}>
         <div className={styles.title}>{title}</div>
         <div className={styles.subtitle}>{subtitle}</div>
+        {showViewMore && <div className={styles.viewMore}>더 알아보기</div>}
       </div>
-      {/* <Image
-        src="/photo/15x10_DHZ4769.jpg"
-        width={600}
-        height={400}
-        alt="Picture of the author"
-      /> */}
     </div>
   );
 };

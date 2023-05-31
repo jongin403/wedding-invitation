@@ -22,6 +22,7 @@ function WeddingInfo({}: Props) {
       <InfoBlockCard
         title={blockData.title}
         subtitle={blockData.subtitle}
+        showViewMore={blockData.showViewMore}
       ></InfoBlockCard>
     </div>
   );
