@@ -5,28 +5,30 @@ import Link from 'next/link';
 export type GlobalNavigationProps = {
   handleClickItem?: (menuName: string) => void;
 };
+export type NavMenu = {
+  name: string;
+  link: string;
+};
 
 const cx = classNames.bind(styles);
+
+const menuList: NavMenu[] = [
+  { name: '메인 화면', link: '/' },
+  { name: '행사 정보', link: '/wedding-info' },
+  { name: '포토 갤러리', link: '/photo-gallery' },
+  { name: '방명록', link: '/guest-book' },
+  { name: '고객 지원', link: '/customer-support' },
+];
 
 const GlobalNavigation = ({ handleClickItem }: GlobalNavigationProps) => {
   return (
     <div className={styles.globalNavigation}>
       <div className={styles.tabMenuList}>
-        <Link href="/" className={styles.tabMenu}>
-          <span className={styles.menuName}>메인 화면</span>
-        </Link>
-        <Link href="/" className={styles.tabMenu}>
-          <span className={styles.menuName}>행사 정보</span>
-        </Link>
-        <Link href="/" className={styles.tabMenu}>
-          <span className={styles.menuName}>포토 갤러리</span>
-        </Link>
-        <Link href="/" className={styles.tabMenu}>
-          <span className={styles.menuName}>방명록</span>
-        </Link>
-        <Link href="/" className={styles.tabMenu}>
-          <span className={styles.menuName}>고객 지원</span>
-        </Link>
+        {menuList.map((menu) => (
+          <Link key={menu.name} href={menu.link} className={styles.tabMenu}>
+            <span className={styles.menuName}> {menu.name} </span>
+          </Link>
+        ))}
       </div>
     </div>
   );

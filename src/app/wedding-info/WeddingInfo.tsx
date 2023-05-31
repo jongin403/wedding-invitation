@@ -11,6 +11,7 @@ type Props = {};
 const blockData: InfoBlockCardProps = {
   title: '놀랍도록 완벽한 결혼 생활',
   subtitle: '프로 그 이상.',
+  showViewMore: true,
 };
 
 function WeddingInfo({}: Props) {
