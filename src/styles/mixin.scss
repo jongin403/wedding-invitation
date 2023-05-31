@@ -1,3 +1,6 @@
+@import '_colors';
+@import '_variables';
+
 @mixin ellipsis($lineCount: 1) {
   overflow: hidden;
   text-overflow: ellipsis;
