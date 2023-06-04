@@ -1,7 +1,7 @@
 import './globals.css';
 
-import NavigationMenu from '../components/NavigationMenu';
 import GlobalNavigation from '../components/GlobalNavigation';
+import Footer from '../components/Footer';
 import '../styles/init.scss';
 
 export const metadata = {
@@ -17,8 +17,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <GlobalNavigation />
-        <NavigationMenu />
         <div>{children}</div>
+        <Footer />
       </body>
     </html>
   );
