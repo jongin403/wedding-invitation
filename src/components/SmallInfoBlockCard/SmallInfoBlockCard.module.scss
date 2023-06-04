@@ -1,15 +1,17 @@
 @import '../../styles/mixin';
 
-.infoBlockCard {
-  width: 100%;
+.SmallInfoBlockCard {
   @media #{$mobile} {
     height: 500px;
+    width: 100%;
   }
   @media #{$tablet} {
-    height: 650px;
+    height: 490px;
+    width: 50%;
   }
   @media #{$desktop} {
-    height: 692px;
+    height: 580px;
+    width: 50%;
   }
 
   background-size: cover;

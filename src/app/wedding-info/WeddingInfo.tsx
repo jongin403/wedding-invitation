@@ -1,31 +1,43 @@
-'use client';
+import { blockData } from '../../types/infoBlockType';
 
-import React from 'react';
-import FirstStep from './FirstStep';
-import InfoBlockCard, {
-  InfoBlockCardProps,
-} from '../../components/InfoBlockCard/index';
+export const blockDataList1: blockData[] = [
+  {
+    title: '놀랍도록 완벽한 결혼 생활',
+    subtitle: '프로 그 이상.',
+    showViewMore: true,
+    imageUrl: '/photo/15x10_DHZ4769.jpg',
+  },
+  {
+    title: '놀랍도록 완벽한 결혼 생활',
+    subtitle: '프로 그 이상.',
+    showViewMore: true,
+    imageUrl: '/photo/15x10_DHZ4769.jpg',
+  },
+];
 
-type Props = {};
-
-const blockData: InfoBlockCardProps = {
-  title: '놀랍도록 완벽한 결혼 생활',
-  subtitle: '프로 그 이상.',
-  showViewMore: true,
-};
-
-function WeddingInfo({}: Props) {
-  return (
-    <div>
-      <h1>WeddingInfo</h1>
-      <FirstStep></FirstStep>
-      <InfoBlockCard
-        title={blockData.title}
-        subtitle={blockData.subtitle}
-        showViewMore={blockData.showViewMore}
-      ></InfoBlockCard>
-    </div>
-  );
-}
-
-export default WeddingInfo;
+export const blockDataList2: blockData[] = [
+  {
+    title: '놀랍도록 완벽한 결혼 생활',
+    subtitle: '프로 그 이상.',
+    showViewMore: true,
+    imageUrl: '/photo/15x10_DHZ4769.jpg',
+  },
+  {
+    title: '놀랍도록 완벽한 결혼 생활',
+    subtitle: '프로 그 이상.',
+    showViewMore: true,
+    imageUrl: '/photo/15x10_DHZ4769.jpg',
+  },
+  {
+    title: '놀랍도록 완벽한 결혼 생활',
+    subtitle: '프로 그 이상.',
+    showViewMore: true,
+    imageUrl: '/photo/15x10_DHZ4769.jpg',
+  },
+  {
+    title: '놀랍도록 완벽한 결혼 생활',
+    subtitle: '프로 그 이상.',
+    showViewMore: true,
+    imageUrl: '/photo/15x10_DHZ4769.jpg',
+  },
+];

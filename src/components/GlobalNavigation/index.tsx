@@ -1,13 +1,10 @@
 import classNames from 'classnames/bind';
 import styles from './GlobalNavigation.module.scss';
 import Link from 'next/link';
+import { NavMenu } from '../../types/uiType';
 
 export type GlobalNavigationProps = {
   handleClickItem?: (menuName: string) => void;
-};
-export type NavMenu = {
-  name: string;
-  link: string;
 };
 
 const cx = classNames.bind(styles);
