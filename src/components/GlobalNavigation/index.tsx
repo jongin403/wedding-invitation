@@ -12,6 +12,7 @@ const cx = classNames.bind(styles);
 const menuList: NavMenu[] = [
   { name: '메인 화면', link: '/' },
   { name: '행사 정보', link: '/wedding-info' },
+  { name: '주인공 소개', link: '/charater-info' },
   { name: '포토 갤러리', link: '/photo-gallery' },
   { name: '방명록', link: '/guest-book' },
   { name: '고객 지원', link: '/customer-support' },
