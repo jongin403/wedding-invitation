@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoBlockCard from '../../components/InfoBlockCard/index';
+import BigInfoBlockCard from '../../components/BigInfoBlockCard/index';
 import SmallInfoBlockCard from '../../components/SmallInfoBlockCard/index';
 import { blockDataList1, blockDataList2 } from './WeddingInfo';
 
@@ -14,13 +14,13 @@ const WeddingInfo = ({}: WeddingInfoProps) => {
         결혼 정보 페이지 입니다.
         {blockDataList1.map((elem, index) => {
           return (
-            <InfoBlockCard
+            <BigInfoBlockCard
               key={index}
               title={elem.title}
               subtitle={elem.subtitle}
               showViewMore={elem.showViewMore}
               imageUrl={elem.imageUrl}
-            ></InfoBlockCard>
+            ></BigInfoBlockCard>
           );
         })}
         {blockDataList2.map((elem, index) => {

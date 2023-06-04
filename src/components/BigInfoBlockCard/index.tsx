@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
-import styles from './InfoBlockCard.module.scss';
+import styles from './BigInfoBlockCard.module.scss';
 
-export type InfoBlockCardProps = {
+export type BigInfoBlockCardProps = {
   handleClickItem?: (menuName: string) => void;
   title: string;
   subtitle: string;
@@ -11,19 +11,19 @@ export type InfoBlockCardProps = {
 
 const cx = classNames.bind(styles);
 
-const InfoBlockCard = ({
+const BigInfoBlockCard = ({
   handleClickItem,
   title,
   subtitle,
   showViewMore,
   imageUrl,
-}: InfoBlockCardProps) => {
+}: BigInfoBlockCardProps) => {
   const background = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),url(${imageUrl})`,
   };
 
   return (
-    <div className={styles.infoBlockCard} style={background}>
+    <div className={styles.bigInfoBlockCard} style={background}>
       <div className={styles.textWrap}>
         <div className={styles.title}>{title}</div>
         <div className={styles.subtitle}>{subtitle}</div>
@@ -33,4 +33,4 @@ const InfoBlockCard = ({
   );
 };
 
-export default InfoBlockCard;
+export default BigInfoBlockCard;
