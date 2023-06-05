@@ -5,4 +5,38 @@
   @media #{$desktop} {
     padding: 22px;
   }
+  background-color: $footer-background;
+}
+
+.copyright {
+  font-family: $font-default;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 130%;
+  color: $footer-text-color;
+}
+
+.footerItemList {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footerItem {
+  white-space: nowrap;
+  font-family: $font-default;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 130%;
+  color: $black-99;
+}
+
+.itemDivider {
+  padding: 0 3px;
+  font-family: $font-default;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 130%;
+  color: $black-99;
 }

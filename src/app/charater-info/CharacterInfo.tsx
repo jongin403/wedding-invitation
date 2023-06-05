@@ -1,6 +1,6 @@
-import { blockData } from '../../types/infoBlockType';
+import { BlockData } from '../../types/infoBlockType';
 
-export const blockDataList1: blockData[] = [
+export const blockDataList1: BlockData[] = [
   {
     title: '새롭게 선보이는 신랑 신부의 모습',
     subtitle: '프로 그 이상.',
@@ -10,7 +10,7 @@ export const blockDataList1: blockData[] = [
 ];
 
 // 우리들의 개선된 점
-export const blockDataList2: blockData[] = [
+export const blockDataList2: BlockData[] = [
   {
     title: '슬림한 바디',
     subtitle: '다이어트를 수행한 차세대 몸체를 이용한 결혼 행진.',

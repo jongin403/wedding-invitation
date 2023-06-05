@@ -1,6 +1,6 @@
-import { blockData } from '../../types/infoBlockType';
+import { BlockData } from '../../types/infoBlockType';
 
-export const blockDataList1: blockData[] = [
+export const blockDataList1: BlockData[] = [
   {
     title: '놀랍도록 완벽할 결혼 생활의 시작을 경험',
     subtitle: '한국시간 아침 11시, 오프라인 행사.',
@@ -16,7 +16,7 @@ export const blockDataList1: blockData[] = [
 ];
 
 // 결혼식에 참석해야할 갖가지 이유.
-export const blockDataList2: blockData[] = [
+export const blockDataList2: BlockData[] = [
   {
     title: '적절한 시간대',
     subtitle: '토요일 점심 먹고 다른 일정을 볼 수 있는 여유로운 시간.',
