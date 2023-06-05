@@ -4,10 +4,13 @@ type Props = {
   children: React.ReactNode;
 };
 
+export const metadata = {
+  title: '| 행사 정보',
+};
+
 function WeddingInfoLayout({ children }: Props) {
   return (
     <div>
-      <h1>WeddingInfoLayout</h1>
       <div>{children}</div>
     </div>
   );

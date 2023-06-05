@@ -1,13 +1,10 @@
 import React from 'react';
 
+import { BlockData } from '../../types/infoBlockType';
 import styles from './SmallInfoBlockCard.module.scss';
 
-export type SmallInfoBlockCardProps = {
+export type SmallInfoBlockCardProps = BlockData & {
   handleClickItem?: (menuName: string) => void;
-  title: string;
-  subtitle: string;
-  showViewMore: boolean;
-  imageUrl: string;
 };
 
 const SmallInfoBlockCard = ({

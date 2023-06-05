@@ -1,0 +1,17 @@
+@import '../../styles/mixin';
+
+.topIntroduce {
+  //
+}
+
+.smallGrids {
+  display: grid;
+  gap: 10px;
+  @media #{$mobile} {
+    grid-template-columns: 1fr;
+  }
+  @media #{$tablet}, #{$desktop} {
+    padding: 0 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+}

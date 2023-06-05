@@ -3,34 +3,38 @@ import React from 'react';
 import BigInfoBlockCard from '../../components/BigInfoBlockCard/index';
 import SmallInfoBlockCard from '../../components/SmallInfoBlockCard/index';
 import { blockDataList1, blockDataList2 } from './WeddingInfo';
+import styles from './WeddingInfo.module.scss';
 
 const WeddingInfo = () => {
   return (
     <div>
       <div>
-        결혼 정보 페이지 입니다.
-        {blockDataList1.map((elem, index) => {
-          return (
-            <BigInfoBlockCard
-              key={index}
-              title={elem.title}
-              subtitle={elem.subtitle}
-              showViewMore={elem.showViewMore}
-              imageUrl={elem.imageUrl}
-            ></BigInfoBlockCard>
-          );
-        })}
-        {blockDataList2.map((elem, index) => {
-          return (
-            <SmallInfoBlockCard
-              key={index}
-              title={elem.title}
-              subtitle={elem.subtitle}
-              showViewMore={elem.showViewMore}
-              imageUrl={elem.imageUrl}
-            ></SmallInfoBlockCard>
-          );
-        })}
+        <section className={styles.topIntroduce}>
+          {blockDataList1.map((elem, index) => {
+            return (
+              <BigInfoBlockCard
+                key={index}
+                title={elem.title}
+                subtitle={elem.subtitle}
+                showViewMore={elem.showViewMore}
+                imageUrl={elem.imageUrl}
+              ></BigInfoBlockCard>
+            );
+          })}
+        </section>
+        <section className={styles.smallGrids}>
+          {blockDataList2.map((elem, index) => {
+            return (
+              <SmallInfoBlockCard
+                key={index}
+                title={elem.title}
+                subtitle={elem.subtitle}
+                showViewMore={elem.showViewMore}
+                imageUrl={elem.imageUrl}
+              ></SmallInfoBlockCard>
+            );
+          })}
+        </section>
       </div>
     </div>
   );

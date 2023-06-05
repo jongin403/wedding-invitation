@@ -3,15 +3,15 @@
 .SmallInfoBlockCard {
   @media #{$mobile} {
     height: 500px;
-    width: 100%;
+    //width: 100%;
   }
   @media #{$tablet} {
     height: 490px;
-    width: 50%;
+    //width: 50%;
   }
   @media #{$desktop} {
     height: 580px;
-    width: 50%;
+    //width: 50%;
   }
 
   background-size: cover;
