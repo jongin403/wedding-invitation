@@ -1,11 +1,8 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 
-type Props = {};
-
-function Sponsor({}: Props) {
+function Sponsor() {
   return (
     <div>
       <h1>Sponsor</h1>

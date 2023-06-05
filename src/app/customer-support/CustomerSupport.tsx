@@ -2,9 +2,7 @@
 
 import React from 'react';
 
-type Props = {};
-
-function CustomerSupport({}: Props) {
+function CustomerSupport() {
   return (
     <div>
       <h1>CustomerSupport</h1>

@@ -2,9 +2,7 @@
 
 import React from 'react';
 
-type Props = {};
-
-function PhotoGallery({}: Props) {
+function PhotoGallery() {
   return (
     <div>
       <h1>PhotoGallery</h1>

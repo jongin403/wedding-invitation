@@ -2,9 +2,7 @@
 
 import React from 'react';
 
-type Props = {};
-
-function GuestBook({}: Props) {
+function GuestBook() {
   return (
     <div>
       <h1>GuestBook</h1>

@@ -3,11 +3,7 @@ import BigInfoBlockCard from '../../components/BigInfoBlockCard/index';
 import SmallInfoBlockCard from '../../components/SmallInfoBlockCard/index';
 import { blockDataList1, blockDataList2 } from './CharacterInfo';
 
-type CharacterInfoProps = {
-  //
-};
-
-const CharacterInfo = ({}: CharacterInfoProps) => {
+const CharacterInfo = () => {
   return (
     <div>
       <div>

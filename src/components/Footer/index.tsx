@@ -1,11 +1,9 @@
-import classNames from 'classnames/bind';
+import React from 'react';
+
 import styles from './Footer.module.scss';
-import Link from 'next/link';
 import { companyName, footerInfoList } from './Footer';
 
-const cx = classNames.bind(styles);
-
-const Footer = ({}) => {
+const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.copyright}>

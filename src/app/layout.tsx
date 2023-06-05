@@ -1,5 +1,7 @@
 import './globals.css';
 
+import React from 'react';
+
 import GlobalNavigation from '../components/GlobalNavigation';
 import Footer from '../components/Footer';
 import '../styles/init.scss';

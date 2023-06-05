@@ -1,4 +1,5 @@
-import classNames from 'classnames/bind';
+import React from 'react';
+
 import styles from './GlobalNavigation.module.scss';
 import Link from 'next/link';
 import { NavMenu } from '../../types/uiType';
@@ -6,8 +7,6 @@ import { NavMenu } from '../../types/uiType';
 export type GlobalNavigationProps = {
   handleClickItem?: (menuName: string) => void;
 };
-
-const cx = classNames.bind(styles);
 
 const menuList: NavMenu[] = [
   { name: '메인 화면', link: '/' },
@@ -18,7 +17,7 @@ const menuList: NavMenu[] = [
   { name: '고객 지원', link: '/customer-support' },
 ];
 
-const GlobalNavigation = ({ handleClickItem }: GlobalNavigationProps) => {
+const GlobalNavigation = () => {
   return (
     <div className={styles.globalNavigation}>
       <div className={styles.tabMenuList}>

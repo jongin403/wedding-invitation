@@ -1,13 +1,10 @@
 import React from 'react';
+
 import BigInfoBlockCard from '../../components/BigInfoBlockCard/index';
 import SmallInfoBlockCard from '../../components/SmallInfoBlockCard/index';
 import { blockDataList1, blockDataList2 } from './WeddingInfo';
 
-type WeddingInfoProps = {
-  //
-};
-
-const WeddingInfo = ({}: WeddingInfoProps) => {
+const WeddingInfo = () => {
   return (
     <div>
       <div>

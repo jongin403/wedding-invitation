@@ -1,4 +1,5 @@
-import classNames from 'classnames/bind';
+import React from 'react';
+
 import styles from './BigInfoBlockCard.module.scss';
 
 export type BigInfoBlockCardProps = {
@@ -9,10 +10,7 @@ export type BigInfoBlockCardProps = {
   imageUrl: string;
 };
 
-const cx = classNames.bind(styles);
-
 const BigInfoBlockCard = ({
-  handleClickItem,
   title,
   subtitle,
   showViewMore,
