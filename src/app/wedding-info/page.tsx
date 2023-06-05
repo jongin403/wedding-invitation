@@ -18,6 +18,7 @@ const WeddingInfo = () => {
                 subtitle={elem.subtitle}
                 showViewMore={elem.showViewMore}
                 imageUrl={elem.imageUrl}
+                colorMode={elem.colorMode}
               ></BigInfoBlockCard>
             );
           })}
@@ -31,6 +32,7 @@ const WeddingInfo = () => {
                 subtitle={elem.subtitle}
                 showViewMore={elem.showViewMore}
                 imageUrl={elem.imageUrl}
+                colorMode={elem.colorMode}
               ></SmallInfoBlockCard>
             );
           })}

@@ -3,4 +3,5 @@ export type BlockData = {
   subtitle: string;
   showViewMore: boolean;
   imageUrl: string;
+  colorMode?: 'whiteMode' | 'blackMode';
 };

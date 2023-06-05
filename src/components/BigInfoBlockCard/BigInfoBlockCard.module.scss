@@ -17,6 +17,26 @@
   border-bottom: 10px solid $divider-color;
 }
 
+.blackMode {
+  .title {
+    color: $real-white;
+  }
+
+  .subtitle {
+    color: $real-white;
+  }
+}
+
+.whiteMode {
+  .title {
+    color: $real-black;
+  }
+
+  .subtitle {
+    color: $real-black;
+  }
+}
+
 .textWrap {
   padding-top: 50px;
   display: flex;
@@ -33,7 +53,6 @@
   font-family: $font-default;
   font-size: 56px;
   font-weight: 600;
-  color: $real-white;
 }
 
 .subtitle {
@@ -43,7 +62,6 @@
   font-family: $font-default;
   font-size: 28px;
   font-weight: 400;
-  color: $real-white;
 }
 
 .viewMore {

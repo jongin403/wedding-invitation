@@ -22,12 +22,14 @@ export const blockDataList2: BlockData[] = [
     subtitle: '토요일 점심 먹고 다른 일정을 볼 수 있는 여유로운 시간.',
     showViewMore: true,
     imageUrl: '/photo/15x10_DHZ4769.jpg',
+    colorMode: 'whiteMode',
   },
   {
     title: '아름다운 예식홀',
     subtitle: '어느 곳보다 화려한 신부대기실.',
     showViewMore: true,
     imageUrl: '/photo/15x10_DHZ4769.jpg',
+    colorMode: 'whiteMode',
   },
   {
     title: '편리한 대중 교통',

@@ -6,6 +6,7 @@ export const blockDataList1: BlockData[] = [
     subtitle: '프로 그 이상.',
     showViewMore: true,
     imageUrl: '/photo/15x10_DHZ4769.jpg',
+    colorMode: 'whiteMode',
   },
 ];
 

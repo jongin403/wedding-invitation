@@ -1,6 +1,6 @@
 @import '../../styles/mixin';
 
-.SmallInfoBlockCard {
+.smallInfoBlockCard {
   @media #{$mobile} {
     height: 500px;
     //width: 100%;
@@ -16,6 +16,26 @@
 
   background-size: cover;
   background-position: center;
+}
+
+.blackMode {
+  .title {
+    color: $real-white;
+  }
+
+  .subtitle {
+    color: $real-white;
+  }
+}
+
+.whiteMode {
+  .title {
+    color: $real-black;
+  }
+
+  .subtitle {
+    color: $real-black;
+  }
 }
 
 .textWrap {
@@ -34,7 +54,6 @@
   font-family: $font-default;
   font-size: 56px;
   font-weight: 600;
-  color: $real-white;
 }
 
 .subtitle {
@@ -44,7 +63,6 @@
   font-family: $font-default;
   font-size: 28px;
   font-weight: 400;
-  color: $real-white;
 }
 
 .viewMore {
