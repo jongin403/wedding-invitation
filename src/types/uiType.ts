@@ -7,3 +7,9 @@ export type FooterInfo = {
   label: string;
   value: string;
 };
+
+export type ImageInfo = {
+  url: string;
+  width: number;
+  height: number;
+};

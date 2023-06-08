@@ -1,5 +1,4 @@
 import React from 'react';
-import PhotoGallery from './PhotoGallery';
 
 type Props = {
   children: React.ReactNode;
@@ -8,8 +7,6 @@ type Props = {
 function PhotoGalleryLayout({ children }: Props) {
   return (
     <div>
-      <h1>PhotoGalleryLayout</h1>
-      <PhotoGallery />
       <div>{children}</div>
     </div>
   );
