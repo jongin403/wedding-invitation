@@ -13,3 +13,8 @@ export type ImageInfo = {
   width: number;
   height: number;
 };
+
+export type LogoInfo = {
+  type: 'blackEn' | 'whiteEn';
+  width: number;
+};

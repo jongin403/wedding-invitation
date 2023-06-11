@@ -2,10 +2,12 @@ import React from 'react';
 
 import styles from './Footer.module.scss';
 import { companyName, footerInfoList } from './Footer';
+import CompanyLogo from '../CompanyLogo';
 
 const Footer = () => {
   return (
     <div className={styles.footer}>
+      <CompanyLogo type={'blackEn'} width={80}></CompanyLogo>
       <div className={styles.copyright}>
         Copyright © {companyName} 모든 권리 보유.
       </div>
