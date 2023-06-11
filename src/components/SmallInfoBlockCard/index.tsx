@@ -2,6 +2,8 @@ import React from 'react';
 
 import { BlockData } from '../../types/infoBlockType';
 import styles from './SmallInfoBlockCard.module.scss';
+import ChevronRightSolid from '../../../public/icon/chevron-right-solid.svg';
+
 import classNames from 'classnames/bind';
 
 export type SmallInfoBlockCardProps = BlockData & {
@@ -31,7 +33,14 @@ const SmallInfoBlockCard = ({
       <div className={styles.textWrap}>
         <div className={styles.title}>{title}</div>
         <div className={styles.subtitle}>{subtitle}</div>
-        {showViewMore && <div className={styles.viewMore}>더 알아보기</div>}
+        {showViewMore && (
+          <div className={styles.viewMoreLine}>
+            <div className={styles.viewMore}>더 알아보기&nbsp;</div>
+            <ChevronRightSolid
+              className={styles.chevronRightSolidIcon}
+            ></ChevronRightSolid>
+          </div>
+        )}
       </div>
     </div>
   );

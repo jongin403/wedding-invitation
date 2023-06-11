@@ -65,6 +65,12 @@
   font-weight: 400;
 }
 
+.viewMoreLine {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 .viewMore {
   @media #{$mobile} {
     font-size: 17px;
@@ -72,5 +78,15 @@
   font-family: $font-default;
   font-size: 21px;
   font-weight: 400;
-  color: $black-link-tag;
+  color: $white-link-tag;
+}
+
+.chevronRightSolidIcon {
+  @media #{$mobile} {
+    width: 8px;
+    padding-left: 2px;
+  }
+  height: 14px;
+  padding-left: 3px;
+  fill: $white-link-tag;
 }
