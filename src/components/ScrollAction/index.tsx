@@ -28,17 +28,11 @@ const setLayout = (
 const ScrollAction = () => {
   const scrollSection = useRef<null[] | HTMLDivElement[]>([]);
 
-  // const deviceKind = useWindowSize();
-
-  // useEffect(() => {
-  //   console.log({
-  //     deviceKind,
-  //   });
-  // }, [deviceKind]);
+  const { height } = useWindowSize();
 
   useEffect(() => {
     setLayout(sceneInfo, scrollSection);
-  }, [scrollSection]);
+  }, [scrollSection, height]);
 
   return (
     <section className={styles.ScrollAction}>

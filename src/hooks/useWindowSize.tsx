@@ -2,16 +2,26 @@
 import { useEffect, useState } from 'react';
 
 import { getDeviceKindByWidth } from '../utils/functions';
-import { DeviceKindType } from '../types/uiType';
+import { DeviceInfoType } from '../types/uiType';
+import { throttle } from 'lodash';
+
+const THROTTLE_INTERVAL = 100;
 
 export const useWindowSize = () => {
   // 초기 state 값은 mobile 로 세팅
-  const [deviceInfo, setDeviceInfo] = useState<DeviceKindType>('mobile');
+  const [deviceInfo, setDeviceInfo] = useState<DeviceInfoType>({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    kind: getDeviceKindByWidth(window.innerWidth),
+  });
 
-  const handleResize = () => {
-    const currentType = getDeviceKindByWidth(window.innerWidth);
-    setDeviceInfo(currentType);
-  };
+  const handleResize = throttle(() => {
+    setDeviceInfo({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      kind: getDeviceKindByWidth(window.innerWidth),
+    });
+  }, THROTTLE_INTERVAL);
 
   const unbindResizeEvent = () => {
     return window.removeEventListener('resize', () => {

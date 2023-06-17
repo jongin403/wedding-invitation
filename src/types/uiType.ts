@@ -19,4 +19,9 @@ export type LogoInfo = {
   width: number;
 };
 
-export type DeviceKindType = 'mobile' | 'tablet' | 'desktop';
+export type DeviceInfoKindType = 'mobile' | 'tablet' | 'desktop';
+export type DeviceInfoType = {
+  width: number;
+  height: number;
+  kind: DeviceInfoKindType;
+};
