@@ -2,3 +2,24 @@
 
 .scrollAction {
 }
+
+.stickyItem {
+  //display: none;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.firstScene .stickyItem {
+  display: block;
+}
+
+.description {
+  font-family: $font-default;
+  font-size: 32px;
+  font-weight: 400;
+  color: $real-white;
+}

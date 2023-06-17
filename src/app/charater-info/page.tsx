@@ -1,5 +1,6 @@
 import React from 'react';
 import BigInfoBlockCard from '../../components/BigInfoBlockCard/index';
+import ScrollAction from '../../components/ScrollAction/index';
 import SmallInfoBlockCard from '../../components/SmallInfoBlockCard/index';
 import { blockDataList1, blockDataList2 } from './CharacterInfo';
 
@@ -20,6 +21,7 @@ const CharacterInfo = () => {
             ></BigInfoBlockCard>
           );
         })}
+        <ScrollAction></ScrollAction>
         {blockDataList2.map((elem, index) => {
           return (
             <SmallInfoBlockCard
