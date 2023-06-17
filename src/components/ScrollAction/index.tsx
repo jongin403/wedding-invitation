@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
 import { useWindowSize } from '../../hooks/useWindowSize';
+import { useWindowScroll } from '../../hooks/useWindowScroll';
 import styles from './ScrollAction.module.scss';
 
 import classNames from 'classnames/bind';
@@ -11,6 +12,7 @@ export type ScrollActionProps = {
 };
 
 const cx = classNames.bind(styles);
+
 const setLayout = (
   sceneInfo: SceneInfoType[],
   scrollSection: React.MutableRefObject<null[] | HTMLDivElement[]>
@@ -29,10 +31,18 @@ const ScrollAction = () => {
   const scrollSection = useRef<null[] | HTMLDivElement[]>([]);
 
   const { height } = useWindowSize();
+  const { yOffset } = useWindowScroll();
 
   useEffect(() => {
     setLayout(sceneInfo, scrollSection);
   }, [scrollSection, height]);
+
+  // const scrollLoop = () => {};
+  // useEffect(() => {
+  //   console.log({
+  //     yOffset,
+  //   });
+  // }, [yOffset]);
 
   return (
     <section className={styles.ScrollAction}>

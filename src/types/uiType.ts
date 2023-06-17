@@ -25,3 +25,7 @@ export type DeviceInfoType = {
   height: number;
   kind: DeviceInfoKindType;
 };
+
+export type ScrollInfoType = {
+  yOffset: number;
+};
