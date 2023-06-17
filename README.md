@@ -20,3 +20,27 @@
 
 - `npm run dev`
 - http://localhost:3000
+
+<br/>
+
+## 프로젝트 구조
+
+```
+public
+┣ icon : svg 아이콘
+┣ logo : 웹사이트 로고
+┗ photo : 촬영 사진
+src
+┣ api
+┣ app : 페이지
+┃ ┣ charater-info
+┃ ┣ customer-support
+┃ ┣ guest-book
+┃ ┣ photo-gallery
+┃ ┣ wedding-info
+┣ components : 컴포넌트
+┣ hooks : custom 훅
+┣ styles : 공통 css
+┣ types : 타입 정의
+┗ utils : 유틸
+```

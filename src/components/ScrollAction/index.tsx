@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
-
+import { useWindowSize } from '../../hooks/useWindowSize';
 import styles from './ScrollAction.module.scss';
 
 import classNames from 'classnames/bind';
@@ -27,6 +27,8 @@ const setLayout = (
 
 const ScrollAction = () => {
   const scrollSection = useRef<null[] | HTMLDivElement[]>([]);
+
+  const { width, height } = useWindowSize();
 
   useEffect(() => {
     setLayout(sceneInfo, scrollSection);
