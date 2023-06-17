@@ -28,7 +28,13 @@ const setLayout = (
 const ScrollAction = () => {
   const scrollSection = useRef<null[] | HTMLDivElement[]>([]);
 
-  const { width, height } = useWindowSize();
+  // const deviceKind = useWindowSize();
+
+  // useEffect(() => {
+  //   console.log({
+  //     deviceKind,
+  //   });
+  // }, [deviceKind]);
 
   useEffect(() => {
     setLayout(sceneInfo, scrollSection);

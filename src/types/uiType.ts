@@ -18,3 +18,5 @@ export type LogoInfo = {
   type: 'blackEn' | 'whiteEn';
   width: number;
 };
+
+export type DeviceKindType = 'mobile' | 'tablet' | 'desktop';
