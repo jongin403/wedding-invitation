@@ -23,6 +23,8 @@ const setLayout = (
     const currentElement = scrollSection.current[index];
     if (currentElement) {
       currentElement.style.height = `${element.scrollHeight}px`;
+      element.startYpos = currentElement.offsetTop;
+      element.endYpos = currentElement.offsetTop + element.scrollHeight;
     }
   });
 };
@@ -43,37 +45,50 @@ const ScrollAction = () => {
   //     yOffset,
   //   });
   // }, [yOffset]);
-
+  const showSceneName = 'show-scene-0';
   return (
     <section className={styles.ScrollAction}>
-      <div className={cx('scene', 'firstScene')}>
+      <div className={cx(showSceneName)}>
         <div
-          id="scroll-section-1"
           ref={(el) => (scrollSection.current[0] = el)}
-          className={cx('stickyItem', 'description')}
+          className={cx('scroll-section-0')}
         >
-          슬림한 바디
+          <div className={cx('description')}>scroll-section-0</div>
+
+          <div className={cx('stickyItem', 'description')}>슬림한 바디</div>
+          <div className={cx('stickyItem', 'description')}>향상된 체력</div>
+          <div className={cx('stickyItem', 'description')}>
+            첨단 보안 기능은 기본
+          </div>
+          <div className={cx('stickyItem', 'description')}>워라밸</div>
         </div>
         <div
-          id="scroll-section-2"
           ref={(el) => (scrollSection.current[1] = el)}
-          className={cx('stickyItem', 'description')}
+          className={cx('scroll-section-1')}
         >
-          향상된 체력
+          <div className={cx('description')}>scroll-section-1</div>
+          <div className={cx('stickyItem', 'description')}>
+            scroll-section-1 sticky
+          </div>
         </div>
         <div
-          id="scroll-section-3"
+          id={'scroll-section-2'}
           ref={(el) => (scrollSection.current[2] = el)}
-          className={cx('stickyItem', 'description')}
+          className={cx('scroll-section-2')}
         >
-          첨단 보안 기능은 기본
+          <div className={cx('description')}>scroll-section-2</div>
+          <div className={cx('stickyItem', 'description')}>
+            scroll-section-2 sticky
+          </div>
         </div>
         <div
-          id="scroll-section-4"
           ref={(el) => (scrollSection.current[3] = el)}
-          className={cx('stickyItem', 'description')}
+          className={cx('scroll-section-3')}
         >
-          워라밸
+          <div className={cx('description')}>scroll-section-3</div>
+          <div className={cx('stickyItem', 'description')}>
+            scroll-section-3 sticky
+          </div>
         </div>
       </div>
     </section>
