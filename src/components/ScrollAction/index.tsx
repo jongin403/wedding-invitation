@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from '../../hooks/useWindowSize';
 import { useWindowScroll } from '../../hooks/useWindowScroll';
 import styles from './ScrollAction.module.scss';
@@ -12,7 +12,7 @@ export type ScrollActionProps = {
 };
 
 const cx = classNames.bind(styles);
-
+const SCENE_NAME_PREFIX = 'show-scene-';
 const setLayout = (
   sceneInfo: SceneInfoType[],
   scrollSection: React.MutableRefObject<null[] | HTMLDivElement[]>
@@ -37,7 +37,8 @@ const ScrollAction = () => {
 
   useEffect(() => {
     setLayout(sceneInfo, scrollSection);
-  }, [scrollSection, height]);
+    setCurrentScene(yOffset);
+  }, [scrollSection, height, yOffset]);
 
   // const scrollLoop = () => {};
   // useEffect(() => {
@@ -45,10 +46,28 @@ const ScrollAction = () => {
   //     yOffset,
   //   });
   // }, [yOffset]);
-  const showSceneName = 'show-scene-0';
+  const [sceneClassName, setSceneClassName] = useState('');
+  const setCurrentScene = (yOffset: number) => {
+    const currentIndex = sceneInfo.findIndex((element) => {
+      if (!element.startYpos || !element.endYpos) {
+        return false;
+      }
+      if (element.startYpos <= yOffset && yOffset <= element.endYpos) {
+        return true;
+      }
+      return false;
+    });
+
+    if (0 <= currentIndex) {
+      setSceneClassName(`${SCENE_NAME_PREFIX}${currentIndex}`);
+    } else {
+      setSceneClassName('');
+    }
+  };
+
   return (
     <section className={styles.ScrollAction}>
-      <div className={cx(showSceneName)}>
+      <div className={cx(`${sceneClassName}`)}>
         <div
           ref={(el) => (scrollSection.current[0] = el)}
           className={cx('scroll-section-0')}
