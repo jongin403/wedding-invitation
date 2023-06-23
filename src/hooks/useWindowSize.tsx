@@ -7,20 +7,20 @@ import { throttle } from 'lodash';
 
 const THROTTLE_INTERVAL = 100;
 
-export const useWindowSize = () => {
-  // 초기 state 값은 mobile 로 세팅
-  const [deviceInfo, setDeviceInfo] = useState<DeviceInfoType>({
+const getWindowSize = () => {
+  return {
     width: window.innerWidth,
     height: window.innerHeight,
     kind: getDeviceKindByWidth(window.innerWidth),
-  });
+  };
+};
+
+export const useWindowSize = () => {
+  // 초기 state 값은 mobile 로 세팅
+  const [deviceInfo, setDeviceInfo] = useState<DeviceInfoType>(getWindowSize());
 
   const handleResize = throttle(() => {
-    setDeviceInfo({
-      width: window.innerWidth,
-      height: window.innerHeight,
-      kind: getDeviceKindByWidth(window.innerWidth),
-    });
+    setDeviceInfo(getWindowSize());
   }, THROTTLE_INTERVAL);
 
   const unbindResizeEvent = () => {
