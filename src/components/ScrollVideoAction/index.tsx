@@ -13,7 +13,11 @@ export type ScrollActionProps = {
 
 const cx = classNames.bind(styles);
 
-const getScrollInfo = (startScrollTop, endScrollTop, currentScrollTop) => {
+const getScrollInfo = ({
+  startScrollTop,
+  endScrollTop,
+  currentScrollTop,
+}: ScrollActionProps) => {
   const scrollInfo = {
     isActive: false,
     ratio: 0,
@@ -25,9 +29,9 @@ const getScrollInfo = (startScrollTop, endScrollTop, currentScrollTop) => {
   return scrollInfo;
 };
 
-const animateOpacity = (element, startValue, endValue, ratio) => {
-  element.style.opacity = startValue + (endValue - startValue) * ratio;
-};
+// const animateOpacity = (element, startValue, endValue, ratio) => {
+//   element.style.opacity = startValue + (endValue - startValue) * ratio;
+// };
 
 // const animateTop = (element, startValue, endValue, ratio) => {
 //   element.current.style.top = startValue + (endValue - startValue) * ratio;
@@ -60,27 +64,27 @@ const ScrollVideoAction = ({
   endScrollTop,
   currentScrollTop,
 }: ScrollActionProps) => {
-  const initialScrollInfo = getScrollInfo(
+  const initialScrollInfo = getScrollInfo({
     startScrollTop,
     endScrollTop,
-    currentScrollTop
-  );
+    currentScrollTop,
+  });
   const [scrollInfo, setScrollInfo] = useState(initialScrollInfo);
 
   useEffect(() => {
-    const _scrollInfo = getScrollInfo(
+    const _scrollInfo = getScrollInfo({
       startScrollTop,
       endScrollTop,
-      currentScrollTop
-    );
+      currentScrollTop,
+    });
     setScrollInfo(_scrollInfo);
     //setVideoPlay();
-    showDescription();
+    //showDescription();
   }, [startScrollTop, endScrollTop, currentScrollTop]);
 
-  const showDescription = () => {
-    animateOpacity(descElementList.current[0], 0, 1, scrollInfo.ratio);
-  };
+  // const showDescription = () => {
+  //   animateOpacity(descElementList.current[0], 0, 1, scrollInfo.ratio);
+  // };
   const descElementList = useRef<null[] | HTMLDivElement[]>([]);
 
   return (
