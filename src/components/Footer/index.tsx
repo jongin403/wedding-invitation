@@ -7,7 +7,7 @@ import CompanyLogo from '../CompanyLogo';
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <CompanyLogo type={'blackEn'} width={80}></CompanyLogo>
+      <CompanyLogo type={'blackEn'} width={80} />
       <div className={styles.copyright}>
         Copyright © {companyName} 모든 권리 보유.
       </div>

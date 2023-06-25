@@ -41,6 +41,4 @@ Small.args = {
   label: 'Button',
 };
 
-export const NavLinkButton = (
-  <NavLinkButtonStyle size="small"></NavLinkButtonStyle>
-);
+export const NavLinkButton = <NavLinkButtonStyle size="small" />;

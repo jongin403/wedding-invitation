@@ -8,8 +8,8 @@ import { LogoInfo } from '../../types/uiType';
 const CompanyLogo = ({ type, width }: LogoInfo) => {
   return (
     <div className={styles.companyLogoWrap}>
-      {type === 'blackEn' && <BlackLogoEn width={width}></BlackLogoEn>}
-      {type === 'whiteEn' && <WhiteLogoEn width={width}></WhiteLogoEn>}
+      {type === 'blackEn' && <BlackLogoEn width={width} />}
+      {type === 'whiteEn' && <WhiteLogoEn width={width} />}
     </div>
   );
 };

@@ -18,10 +18,10 @@ const CharacterInfo = () => {
               showViewMore={elem.showViewMore}
               imageUrl={elem.imageUrl}
               colorMode={elem.colorMode}
-            ></BigInfoBlockCard>
+            />
           );
         })}
-        <ScrollAction></ScrollAction>
+        <ScrollAction />
         {blockDataList2.map((elem, index) => {
           return (
             <SmallInfoBlockCard
@@ -31,7 +31,7 @@ const CharacterInfo = () => {
               showViewMore={elem.showViewMore}
               imageUrl={elem.imageUrl}
               colorMode={elem.colorMode}
-            ></SmallInfoBlockCard>
+            />
           );
         })}
       </div>

@@ -19,7 +19,7 @@ const WeddingInfo = () => {
                 showViewMore={elem.showViewMore}
                 imageUrl={elem.imageUrl}
                 colorMode={elem.colorMode}
-              ></BigInfoBlockCard>
+              />
             );
           })}
         </section>
@@ -33,7 +33,7 @@ const WeddingInfo = () => {
                 showViewMore={elem.showViewMore}
                 imageUrl={elem.imageUrl}
                 colorMode={elem.colorMode}
-              ></SmallInfoBlockCard>
+              />
             );
           })}
         </section>

@@ -36,9 +36,7 @@ const BigInfoBlockCard = ({
         {showViewMore && (
           <div className={styles.viewMoreLine}>
             <div className={styles.viewMore}>더 알아보기&nbsp;</div>
-            <ChevronRightSolid
-              className={styles.chevronRightSolidIcon}
-            ></ChevronRightSolid>
+            <ChevronRightSolid className={styles.chevronRightSolidIcon} />
           </div>
         )}
       </div>
