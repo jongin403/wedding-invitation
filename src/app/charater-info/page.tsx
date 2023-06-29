@@ -1,10 +1,13 @@
-'use client';
-
 import React from 'react';
 import BigInfoBlockCard from '../../components/BigInfoBlockCard/index';
-import ScrollAction from '../../components/ScrollAction/index';
+import dynamic from 'next/dynamic';
 import SmallInfoBlockCard from '../../components/SmallInfoBlockCard/index';
 import { blockDataList1, blockDataList2 } from './CharacterInfo';
+
+const ScrollAction = dynamic(
+  () => import('../../components/ScrollAction/index'),
+  { ssr: false }
+);
 
 const CharacterInfo = () => {
   return (
