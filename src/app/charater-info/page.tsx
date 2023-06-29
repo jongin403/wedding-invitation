@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import BigInfoBlockCard from '../../components/BigInfoBlockCard/index';
 import ScrollAction from '../../components/ScrollAction/index';
