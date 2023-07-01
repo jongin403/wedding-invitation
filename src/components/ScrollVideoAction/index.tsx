@@ -29,9 +29,21 @@ const getScrollInfo = ({
   return scrollInfo;
 };
 
-// const animateOpacity = (element, startValue, endValue, ratio) => {
-//   element.style.opacity = startValue + (endValue - startValue) * ratio;
-// };
+type AnimateType = {
+  element: HTMLDivElement;
+  startValue: number;
+  endValue: number;
+  ratio: number;
+};
+
+const animateOpacity = ({
+  element,
+  startValue,
+  endValue,
+  ratio,
+}: AnimateType) => {
+  element.style.opacity = `${startValue + (endValue - startValue) * ratio}`;
+};
 
 // const animateTop = (element, startValue, endValue, ratio) => {
 //   element.current.style.top = startValue + (endValue - startValue) * ratio;
@@ -79,12 +91,22 @@ const ScrollVideoAction = ({
     });
     setScrollInfo(_scrollInfo);
     //setVideoPlay();
-    //showDescription();
+    showDescription();
   }, [startScrollTop, endScrollTop, currentScrollTop]);
 
-  // const showDescription = () => {
-  //   animateOpacity(descElementList.current[0], 0, 1, scrollInfo.ratio);
-  // };
+  const showDescription = () => {
+    if (!descElementList?.current[0]) {
+      return;
+    }
+    const animateItem = {
+      element: descElementList.current[0],
+      startValue: 0,
+      endValue: 1,
+      ratio: scrollInfo.ratio,
+    };
+    animateOpacity(animateItem);
+  };
+
   const descElementList = useRef<null[] | HTMLDivElement[]>([]);
 
   return (

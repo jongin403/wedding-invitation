@@ -6,6 +6,7 @@ import styles from './ScrollAction.module.scss';
 
 import classNames from 'classnames/bind';
 import { sceneInfo, SceneInfoType } from './ScrollAction';
+import ScrollVideoAction from '../ScrollVideoAction';
 
 export type ScrollActionProps = {
   //
@@ -67,6 +68,11 @@ const ScrollAction = () => {
 
   return (
     <section className={styles.ScrollAction}>
+      <ScrollVideoAction
+        startScrollTop={0}
+        endScrollTop={600}
+        currentScrollTop={yOffset}
+      />
       <div className={cx(`${sceneClassName}`)}>
         <div
           ref={(el) => (scrollSection.current[0] = el)}
