@@ -45,9 +45,9 @@ const animateOpacity = ({
   element.style.opacity = `${startValue + (endValue - startValue) * ratio}`;
 };
 
-// const animateTop = (element, startValue, endValue, ratio) => {
-//   element.current.style.top = startValue + (endValue - startValue) * ratio;
-// };
+const animateTop = ({ element, startValue, endValue, ratio }: AnimateType) => {
+  element.style.top = `${startValue + (endValue - startValue) * ratio}`;
+};
 
 const animationInfoList = [
   {
@@ -105,6 +105,13 @@ const ScrollVideoAction = ({
       ratio: scrollInfo.ratio,
     };
     animateOpacity(animateItem);
+    const animateHeightItem = {
+      element: descElementList.current[0],
+      startValue: 0,
+      endValue: 10,
+      ratio: scrollInfo.ratio,
+    };
+    animateTop(animateHeightItem);
   };
 
   const descElementList = useRef<null[] | HTMLDivElement[]>([]);
