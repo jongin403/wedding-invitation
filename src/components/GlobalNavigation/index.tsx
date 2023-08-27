@@ -11,6 +11,7 @@ export type GlobalNavigationProps = {
 const menuList: NavMenu[] = [
   { name: '홈', link: '/' },
   { name: '행사 정보', link: '/wedding-info' },
+  { name: '행사 상세', link: '/wedding-detail' },
   { name: '주인공 소개', link: '/charater-info' },
   { name: '갤러리', link: '/photo-gallery' },
   { name: '방명록', link: '/guest-book' },
