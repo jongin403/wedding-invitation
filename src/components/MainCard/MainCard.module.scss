@@ -1,0 +1,63 @@
+@import '../../styles/mixin';
+
+.mainCard {
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+  &:hover {
+    transform: scale(1.01);
+  }
+  background-color: $real-black;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.briefInfoWrap {
+  //
+}
+
+.briefInfoList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobileNewLine {
+  @media #{$tablet}, #{$desktop} {
+    display: none;
+  }
+}
+
+.briefInfoItem {
+  @media #{$mobile} {
+    font-size: 32px;
+  }
+  @media #{$tablet} {
+    font-size: 48px;
+  }
+  @media #{$desktop} {
+    font-size: 60px;
+  }
+  font-family: $font-default;
+  font-weight: 500;
+  line-height: 125%;
+  color: $real-white;
+}
+
+.pointWord {
+  @media #{$mobile} {
+    font-size: 32px;
+  }
+  @media #{$tablet} {
+    font-size: 48px;
+  }
+  @media #{$desktop} {
+    font-size: 60px;
+  }
+  font-family: $font-default;
+  font-weight: 700;
+  line-height: 125%;
+  background: linear-gradient(90deg, #ffa54d, #f07bc5 50%, #43aeff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
