@@ -1,12 +1,21 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-
+import classNames from 'classnames/bind';
 import styles from './MainCard.module.scss';
+
+const cx = classNames.bind(styles);
 
 const MainCard = () => {
   const router = useRouter();
+  const [cardActive, setCardActive] = useState<boolean>(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setCardActive(true), 300);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div
       className={styles.mainCard}
@@ -14,7 +23,13 @@ const MainCard = () => {
       role="presentation"
     >
       <div className={styles.briefInfoWrap}>
-        <div className={styles.briefInfoList}>
+        <div
+          className={cx(
+            'briefInfoList',
+            'appearAnimate',
+            cardActive ? 'active' : ''
+          )}
+        >
           <div className={styles.briefInfoItem}>
             Who?&nbsp;
             <br className={styles.mobileNewLine} />
