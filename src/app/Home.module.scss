@@ -1,23 +1,5 @@
 @import '../styles/mixin';
 
-.briefInfoWrap {
-  min-height: 100vh;
-}
-
-.briefInfoList {
-}
-
-.briefInfoItem {
-  font-size: 32px;
-  font-family: $font-default;
-  font-size: 56px;
-  font-weight: 400;
-  color: $black-33;
-}
-.pointWord {
-  font-size: 32px;
-  font-family: $font-default;
-  font-size: 56px;
-  font-weight: 600;
-  color: $real-black;
+.HomeLayoutWrap {
+  min-height: calc(100vh - $global-navition-height);
 }
